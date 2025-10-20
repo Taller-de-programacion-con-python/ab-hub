@@ -1,0 +1,1296 @@
+{
+  "metadata": {
+    "exportedAt": "2025-10-20T01:15:01.778Z",
+    "componentName": "Pagina Principal",
+    "totalElements": 90,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(233, 239, 236)": "rgb(233, 239, 236)",
+      "color-rgb(244, 247, 246)": "rgb(244, 247, 246)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(30, 32, 30)": "rgb(30, 32, 30)",
+      "color-rgb(105, 117, 101)": "rgb(105, 117, 101)",
+      "color-rgb(60, 61, 55)": "rgb(60, 61, 55)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(225, 111, 100)": "rgb(225, 111, 100)",
+      "color-rgb(219, 237, 219)": "rgb(219, 237, 219)",
+      "color-rgb(253, 236, 200)": "rgb(253, 236, 200)"
+    },
+    "fonts": {
+      "outfit": {
+        "family": "Outfit",
+        "sizes": {
+          "size-30": "30px",
+          "size-85": "85px",
+          "size-64": "64px",
+          "size-20": "20px",
+          "size-15": "15px",
+          "size-10": "10px"
+        },
+        "weights": {
+          "weight-300": "300",
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {
+      "shadow-15-8": {
+        "x": 3,
+        "y": 5,
+        "blur": 15,
+        "color": "rgba(0, 0, 0, 0.25)"
+      }
+    }
+  },
+  "structure": {
+    "name": "pagina-principal",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "styles": {
+      "bg": "rgb(233, 239, 236)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "group-37",
+        "type": "GROUP",
+        "size": {
+          "w": 128,
+          "h": 67
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-39",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 128,
+              "h": 67
+            },
+            "styles": {
+              "bg": "rgb(244, 247, 246)",
+              "radius": 15
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-38",
+        "type": "GROUP",
+        "size": {
+          "w": 192,
+          "h": 100
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-39",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 192,
+              "h": 100
+            },
+            "styles": {
+              "bg": "rgb(244, 247, 246)",
+              "radius": 15
+            }
+          }
+        ]
+      },
+      {
+        "name": "home",
+        "type": "GROUP",
+        "size": {
+          "w": 187,
+          "h": 177
+        },
+        "children": [
+          {
+            "name": "rectangle-26",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 187,
+              "h": 177
+            },
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "shadow": {
+                "x": 3,
+                "y": 5,
+                "blur": 15,
+                "color": "rgba(0, 0, 0, 0.25)"
+              }
+            }
+          },
+          {
+            "name": "inicio",
+            "type": "TEXT",
+            "size": {
+              "w": 69,
+              "h": 21
+            },
+            "content": "Inicio",
+            "styles": {
+              "bg": "rgb(30, 32, 30)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "linea-divisora",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 125,
+              "h": 5
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "radius": 30
+            }
+          }
+        ]
+      },
+      {
+        "name": "calendar",
+        "type": "GROUP",
+        "size": {
+          "w": 179,
+          "h": 177
+        },
+        "children": [
+          {
+            "name": "rectangle-25",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 179,
+              "h": 177
+            },
+            "styles": {
+              "bg": "rgb(233, 239, 236)"
+            }
+          },
+          {
+            "name": "calendario",
+            "type": "TEXT",
+            "size": {
+              "w": 151,
+              "h": 22
+            },
+            "content": "Calendario",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "linea-divisora",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 119,
+              "h": 5
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "radius": 30
+            }
+          }
+        ]
+      },
+      {
+        "name": "notes",
+        "type": "GROUP",
+        "size": {
+          "w": 180,
+          "h": 178
+        },
+        "children": [
+          {
+            "name": "rectangle-26",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 180,
+              "h": 178
+            },
+            "styles": {
+              "bg": "rgb(233, 239, 236)"
+            }
+          },
+          {
+            "name": "notas",
+            "type": "TEXT",
+            "size": {
+              "w": 79,
+              "h": 21
+            },
+            "content": "Notas",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "linea-divisora",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 120,
+              "h": 5
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "radius": 30
+            }
+          }
+        ]
+      },
+      {
+        "name": "tasks",
+        "type": "GROUP",
+        "size": {
+          "w": 180,
+          "h": 177
+        },
+        "children": [
+          {
+            "name": "rectangle-25",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 180,
+              "h": 177
+            },
+            "styles": {
+              "bg": "rgb(233, 239, 236)"
+            }
+          },
+          {
+            "name": "-lbumes",
+            "type": "TEXT",
+            "size": {
+              "w": 115,
+              "h": 21
+            },
+            "content": "Álbumes",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "linea-divisora",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 120,
+              "h": 5
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "radius": 30
+            }
+          }
+        ]
+      },
+      {
+        "name": "diary",
+        "type": "GROUP",
+        "size": {
+          "w": 180,
+          "h": 178
+        },
+        "children": [
+          {
+            "name": "rectangle-30",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 180,
+              "h": 178
+            },
+            "styles": {
+              "bg": "rgb(233, 239, 236)"
+            }
+          },
+          {
+            "name": "tareas",
+            "type": "TEXT",
+            "size": {
+              "w": 91,
+              "h": 21
+            },
+            "content": "Tareas",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "linea-divisora",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 120,
+              "h": 5
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "radius": 30
+            }
+          }
+        ]
+      },
+      {
+        "name": "vista-r-pida",
+        "type": "TEXT",
+        "size": {
+          "w": 481,
+          "h": 108
+        },
+        "content": "Vista rápida",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 85,
+            "weight": "400",
+            "align": "center"
+          }
+        }
+      },
+      {
+        "name": "calendario",
+        "type": "TEXT",
+        "size": {
+          "w": 314,
+          "h": 81
+        },
+        "content": "Calendario",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 64,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "-lbumes",
+        "type": "TEXT",
+        "size": {
+          "w": 244,
+          "h": 81
+        },
+        "content": "Álbumes",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 64,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "notas",
+        "type": "TEXT",
+        "size": {
+          "w": 167,
+          "h": 81
+        },
+        "content": "Notas",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 64,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "13-00",
+        "type": "TEXT",
+        "size": {
+          "w": 50,
+          "h": 14
+        },
+        "content": "13:00",
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "17-00",
+        "type": "TEXT",
+        "size": {
+          "w": 49,
+          "h": 14
+        },
+        "content": "17:00",
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "15-00",
+        "type": "TEXT",
+        "size": {
+          "w": 50,
+          "h": 14
+        },
+        "content": "15:00",
+        "styles": {
+          "bg": "rgb(30, 32, 30)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "14-00",
+        "type": "TEXT",
+        "size": {
+          "w": 51,
+          "h": 14
+        },
+        "content": "14:00",
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "18-00",
+        "type": "TEXT",
+        "size": {
+          "w": 50,
+          "h": 14
+        },
+        "content": "18:00",
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "16-00",
+        "type": "TEXT",
+        "size": {
+          "w": 50,
+          "h": 14
+        },
+        "content": "16:00",
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "text": {
+            "family": "Outfit",
+            "size": 20,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "evento",
+        "type": "GROUP",
+        "size": {
+          "w": 664,
+          "h": 133
+        },
+        "children": [
+          {
+            "name": "rectangle-32",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 664,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "problemario-de-matem-ticas",
+            "type": "TEXT",
+            "size": {
+              "w": 386,
+              "h": 21
+            },
+            "content": "Problemario de Matemáticas",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "hora",
+            "type": "TEXT",
+            "size": {
+              "w": 86,
+              "h": 10
+            },
+            "content": "13:00 - 13:50",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 15,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "borde",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 24,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(225, 111, 100)"
+            }
+          },
+          {
+            "name": "responsable",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "responsable",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "tipo",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "prioridad",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "evento",
+        "type": "GROUP",
+        "size": {
+          "w": 664,
+          "h": 234
+        },
+        "children": [
+          {
+            "name": "rectangle-32",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 664,
+              "h": 234
+            },
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "basketball",
+            "type": "TEXT",
+            "size": {
+              "w": 137,
+              "h": 21
+            },
+            "content": "Basketball",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "hora",
+            "type": "TEXT",
+            "size": {
+              "w": 89,
+              "h": 10
+            },
+            "content": "14:00 - 16:00",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 15,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "borde",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 24,
+              "h": 234
+            },
+            "styles": {
+              "bg": "rgb(219, 237, 219)"
+            }
+          },
+          {
+            "name": "responsable",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "tipo",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "prioridad",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "evento",
+        "type": "GROUP",
+        "size": {
+          "w": 309,
+          "h": 176
+        },
+        "children": [
+          {
+            "name": "rectangle-32",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 309,
+              "h": 176
+            },
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "borde",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 24,
+              "h": 176
+            },
+            "styles": {
+              "bg": "rgb(253, 236, 200)"
+            }
+          },
+          {
+            "name": "ingl-s",
+            "type": "TEXT",
+            "size": {
+              "w": 77,
+              "h": 21
+            },
+            "content": "Inglés",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "hora",
+            "type": "TEXT",
+            "size": {
+              "w": 86,
+              "h": 10
+            },
+            "content": "16:30 - 18:00",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 15,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "responsable",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "tipo",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "prioridad",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "evento",
+        "type": "GROUP",
+        "size": {
+          "w": 331,
+          "h": 176
+        },
+        "children": [
+          {
+            "name": "rectangle-32",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 331,
+              "h": 176
+            },
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "borde",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 24,
+              "h": 176
+            },
+            "styles": {
+              "bg": "rgb(225, 111, 100)"
+            }
+          },
+          {
+            "name": "100-oraciones",
+            "type": "TEXT",
+            "size": {
+              "w": 130,
+              "h": 59
+            },
+            "content": "100\noraciones",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "hora",
+            "type": "TEXT",
+            "size": {
+              "w": 86,
+              "h": 10
+            },
+            "content": "16:30 - 18:00",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 15,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "responsable",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "tipo",
+        "type": "INSTANCE",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "prioridad",
+        "type": "INSTANCE",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "vector-1",
+        "type": "VECTOR",
+        "size": {
+          "w": 698,
+          "h": 0
+        },
+        "styles": {
+          "bg": "rgb(60, 61, 55)",
+          "border": {
+            "width": 2,
+            "color": "rgb(60, 61, 55)"
+          }
+        }
+      },
+      {
+        "name": "group-25",
+        "type": "GROUP",
+        "size": {
+          "w": 30,
+          "h": 32
+        },
+        "children": [
+          {
+            "name": "rectangle-36",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 30,
+              "h": 8
+            },
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "rectangle-37",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 30,
+              "h": 8
+            },
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "rectangle-38",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 30,
+              "h": 8
+            },
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "radius": 15
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-27",
+        "type": "GROUP",
+        "size": {
+          "w": 256,
+          "h": 133
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-39",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 256,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(225, 111, 100)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "materias",
+            "type": "TEXT",
+            "size": {
+              "w": 118,
+              "h": 21
+            },
+            "content": "Materias",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-31",
+        "type": "GROUP",
+        "size": {
+          "w": 256,
+          "h": 133
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-39",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 256,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(244, 247, 246)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "recoger-la-ropa",
+            "type": "TEXT",
+            "size": {
+              "w": 213,
+              "h": 21
+            },
+            "content": "Recoger la ropa",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-33",
+        "type": "GROUP",
+        "size": {
+          "w": 256,
+          "h": 133
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-39",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 256,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(244, 247, 246)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "la-revoluci-n-mexicana-cons---",
+            "type": "TEXT",
+            "size": {
+              "w": 222,
+              "h": 59
+            },
+            "content": "La revolución \nmexicana cons...",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-26",
+        "type": "GROUP",
+        "size": {
+          "w": 256,
+          "h": 133
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-40",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 256,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(219, 237, 219)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "actividades",
+            "type": "TEXT",
+            "size": {
+              "w": 155,
+              "h": 21
+            },
+            "content": "Actividades",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-29",
+        "type": "GROUP",
+        "size": {
+          "w": 256,
+          "h": 133
+        },
+        "styles": {
+          "shadow": {
+            "x": 3,
+            "y": 5,
+            "blur": 15,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-40",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 256,
+              "h": 133
+            },
+            "styles": {
+              "bg": "rgb(253, 236, 200)",
+              "radius": 15
+            }
+          },
+          {
+            "name": "clases-extracurriculares",
+            "type": "TEXT",
+            "size": {
+              "w": 225,
+              "h": 59
+            },
+            "content": "Clases\nextracurriculares",
+            "styles": {
+              "bg": "rgb(60, 61, 55)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "05-de-noviembre-del-2024",
+        "type": "TEXT",
+        "size": {
+          "w": 116,
+          "h": 7
+        },
+        "content": "05 de noviembre del 2024",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 10,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "22-de-octubre-del-2024",
+        "type": "TEXT",
+        "size": {
+          "w": 102,
+          "h": 7
+        },
+        "content": "22 de octubre del 2024",
+        "styles": {
+          "bg": "rgb(0, 0, 0)",
+          "text": {
+            "family": "Outfit",
+            "size": 10,
+            "weight": "300",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 13,
+    "frames": 1,
+    "texts": 30,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}

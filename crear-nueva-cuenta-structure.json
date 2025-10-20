@@ -1,0 +1,596 @@
+{
+  "metadata": {
+    "exportedAt": "2025-10-20T00:43:31.140Z",
+    "componentName": "Crear Nueva Cuenta",
+    "totalElements": 41,
+    "nestingDepth": 8,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(233, 239, 236)": "rgb(233, 239, 236)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(105, 117, 101)": "rgb(105, 117, 101)"
+    },
+    "fonts": {
+      "arial": {
+        "family": "Arial",
+        "sizes": {
+          "size-30": "30px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      },
+      "outfit": {
+        "family": "Outfit",
+        "sizes": {
+          "size-30": "30px"
+        },
+        "weights": {
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {
+      "shadow-3-1": {
+        "x": 0,
+        "y": 1,
+        "blur": 3,
+        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+      },
+      "shadow-2-1": {
+        "x": 0,
+        "y": 1,
+        "blur": 2,
+        "color": "rgba(0, 0, 0, 0.30000001192092896)"
+      },
+      "shadow-50-14": {
+        "x": -10,
+        "y": 4,
+        "blur": 50,
+        "color": "rgba(0, 0, 0, 0.25)"
+      }
+    }
+  },
+  "structure": {
+    "name": "crear-nueva-cuenta",
+    "type": "COMPONENT",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "component": {
+      "type": "main",
+      "name": null
+    },
+    "styles": {
+      "bg": "rgb(233, 239, 236)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "formulario",
+        "type": "GROUP",
+        "size": {
+          "w": 1759,
+          "h": 1080
+        },
+        "children": [
+          {
+            "name": "ingresar-contrase-a",
+            "type": "GROUP",
+            "size": {
+              "w": 960,
+              "h": 75
+            },
+            "children": [
+              {
+                "name": "rectangle-17",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 960,
+                  "h": 75
+                },
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "radius": 30
+                }
+              },
+              {
+                "name": "vector",
+                "type": "VECTOR",
+                "size": {
+                  "w": 15,
+                  "h": 35
+                },
+                "styles": {
+                  "border": {
+                    "width": 4,
+                    "color": "rgb(105, 117, 101)"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "ingresar-correo",
+            "type": "GROUP",
+            "size": {
+              "w": 960,
+              "h": 75
+            },
+            "children": [
+              {
+                "name": "group-8",
+                "type": "GROUP",
+                "size": {
+                  "w": 960,
+                  "h": 75
+                },
+                "children": [
+                  {
+                    "name": "group-7",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 960,
+                      "h": 75
+                    },
+                    "children": [
+                      {
+                        "name": "group-5",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 960,
+                          "h": 75
+                        },
+                        "children": [
+                          {
+                            "name": "rectangle-16",
+                            "type": "RECTANGLE",
+                            "size": {
+                              "w": 960,
+                              "h": 75
+                            },
+                            "styles": {
+                              "bg": "rgb(255, 255, 255)",
+                              "radius": 30
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "right-2_svgrepo-com",
+                "type": "FRAME",
+                "size": {
+                  "w": 60,
+                  "h": 60
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "group-8",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 15,
+                      "h": 35
+                    },
+                    "children": [
+                      {
+                        "name": "group-7",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 15,
+                          "h": 35
+                        },
+                        "children": [
+                          {
+                            "name": "group-5",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 15,
+                              "h": 35
+                            },
+                            "children": [
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 15,
+                                  "h": 35
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 4,
+                                    "color": "rgb(105, 117, 101)"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "group-24",
+            "type": "GROUP",
+            "size": {
+              "w": 359,
+              "h": 170
+            },
+            "children": [
+              {
+                "name": "-a-n-no-tienes-una-cuenta--crea-una-nueva",
+                "type": "TEXT",
+                "size": {
+                  "w": 359,
+                  "h": 59
+                },
+                "content": "¿Aún no tienes una cuenta?\nCrea una Nueva",
+                "styles": {
+                  "bg": "rgb(0, 0, 0)",
+                  "text": {
+                    "family": "Arial",
+                    "size": 30,
+                    "weight": "400",
+                    "align": "center"
+                  }
+                }
+              },
+              {
+                "name": "bot-n-iniciar-de-sesi-n",
+                "type": "GROUP",
+                "size": {
+                  "w": 310,
+                  "h": 75
+                },
+                "children": [
+                  {
+                    "name": "rectangle-18",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 310,
+                      "h": 75
+                    },
+                    "styles": {
+                      "bg": "rgb(105, 117, 101)",
+                      "radius": 30,
+                      "shadow": {
+                        "x": 0,
+                        "y": 1,
+                        "blur": 3,
+                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                      }
+                    }
+                  },
+                  {
+                    "name": "iniciar-sesi-n",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 170,
+                      "h": 21
+                    },
+                    "content": "Iniciar sesión",
+                    "styles": {
+                      "bg": "rgb(255, 255, 255)",
+                      "text": {
+                        "family": "Outfit",
+                        "size": 30,
+                        "weight": "300",
+                        "align": "center"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ingresar-correo",
+            "type": "GROUP",
+            "size": {
+              "w": 248,
+              "h": 189
+            },
+            "children": [
+              {
+                "name": "correo-electr-nico",
+                "type": "TEXT",
+                "size": {
+                  "w": 248,
+                  "h": 21
+                },
+                "content": "Correo electrónico",
+                "styles": {
+                  "bg": "rgb(0, 0, 0)",
+                  "text": {
+                    "family": "Outfit",
+                    "size": 30,
+                    "weight": "300",
+                    "align": "center"
+                  }
+                }
+              },
+              {
+                "name": "nombre",
+                "type": "TEXT",
+                "size": {
+                  "w": 109,
+                  "h": 21
+                },
+                "content": "Nombre",
+                "styles": {
+                  "bg": "rgb(0, 0, 0)",
+                  "text": {
+                    "family": "Outfit",
+                    "size": 30,
+                    "weight": "300",
+                    "align": "center"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "image-4",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 78,
+              "h": 75
+            }
+          },
+          {
+            "name": "ingresar-contrase-a",
+            "type": "GROUP",
+            "size": {
+              "w": 960,
+              "h": 75
+            },
+            "children": [
+              {
+                "name": "rectangle-17",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 960,
+                  "h": 75
+                },
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "radius": 30
+                }
+              },
+              {
+                "name": "vector",
+                "type": "VECTOR",
+                "size": {
+                  "w": 15,
+                  "h": 35
+                },
+                "styles": {
+                  "border": {
+                    "width": 4,
+                    "color": "rgb(105, 117, 101)"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "vuelve-a-escribir-la-contrase-a",
+            "type": "TEXT",
+            "size": {
+              "w": 403,
+              "h": 21
+            },
+            "content": "Vuelve a escribir la contraseña",
+            "styles": {
+              "bg": "rgb(0, 0, 0)",
+              "text": {
+                "family": "Outfit",
+                "size": 30,
+                "weight": "300",
+                "align": "center"
+              }
+            }
+          },
+          {
+            "name": "ingresar-correo",
+            "type": "GROUP",
+            "size": {
+              "w": 960,
+              "h": 75
+            },
+            "children": [
+              {
+                "name": "group-8",
+                "type": "GROUP",
+                "size": {
+                  "w": 960,
+                  "h": 75
+                },
+                "children": [
+                  {
+                    "name": "group-7",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 960,
+                      "h": 75
+                    },
+                    "children": [
+                      {
+                        "name": "group-5",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 960,
+                          "h": 75
+                        },
+                        "children": [
+                          {
+                            "name": "rectangle-16",
+                            "type": "RECTANGLE",
+                            "size": {
+                              "w": 960,
+                              "h": 75
+                            },
+                            "styles": {
+                              "bg": "rgb(255, 255, 255)",
+                              "radius": 30
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "right-2_svgrepo-com",
+                "type": "FRAME",
+                "size": {
+                  "w": 60,
+                  "h": 60
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "group-8",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 15,
+                      "h": 35
+                    },
+                    "children": [
+                      {
+                        "name": "group-7",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 15,
+                          "h": 35
+                        },
+                        "children": [
+                          {
+                            "name": "group-5",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 15,
+                              "h": 35
+                            },
+                            "children": [
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 15,
+                                  "h": 35
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 4,
+                                    "color": "rgb(105, 117, 101)"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ingresar-correo",
+            "type": "GROUP",
+            "size": {
+              "w": 156,
+              "h": 21
+            },
+            "children": [
+              {
+                "name": "contrase-a",
+                "type": "TEXT",
+                "size": {
+                  "w": 156,
+                  "h": 21
+                },
+                "content": "Contraseña",
+                "styles": {
+                  "bg": "rgb(0, 0, 0)",
+                  "text": {
+                    "family": "Outfit",
+                    "size": 30,
+                    "weight": "300",
+                    "align": "center"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "rectangulo-verde-",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 680,
+              "h": 1080
+            },
+            "styles": {
+              "bg": "rgb(105, 117, 101)",
+              "shadow": {
+                "x": -10,
+                "y": 4,
+                "blur": 50,
+                "color": "rgba(0, 0, 0, 0.25)"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 1,
+    "instances": 0,
+    "frames": 2,
+    "texts": 6,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}
