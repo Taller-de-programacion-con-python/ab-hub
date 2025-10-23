@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 import tkinter as tk
 from datetime import date, datetime
 from pathlib import Path
@@ -8,15 +8,15 @@ import sys
 import importlib.util
 
 try:
-    from PIL import Image, ImageTk  # type: ignore
-except ImportError:  # pragma: no cover - Pillow is optional
+    from PIL import Image, ImageTk
+except ImportError:
     Image = None
     ImageTk = None
 
 
-# ---------------------------------------------------------------------------
-# External modules (src & src copy)
-# ---------------------------------------------------------------------------
+
+
+
 BASE_DIR = Path(__file__).resolve().parent
 SRC_DIR = BASE_DIR / "src"
 if str(SRC_DIR) not in sys.path:
@@ -44,8 +44,8 @@ legacy_mensajes = load_legacy_module("mensajes", "03_mensajes.py")
 
 
 try:
-    from validaciones import es_texto_vacio, es_correo_valido, es_contrasena_valida  # type: ignore
-except Exception:  # pragma: no cover - fallback
+    from validaciones import es_texto_vacio, es_correo_valido, es_contrasena_valida
+except Exception:
     def es_texto_vacio(texto: str) -> bool:
         return not texto or str(texto).strip() == ""
 
@@ -58,8 +58,8 @@ except Exception:  # pragma: no cover - fallback
         return any(c.isalpha() for c in contrasena) and any(c.isdigit() for c in contrasena)
 
 try:
-    from fechas import formatear_fecha, estado_por_dias  # type: ignore
-except Exception:  # pragma: no cover
+    from fechas import formatear_fecha, estado_por_dias
+except Exception:
     def formatear_fecha(fecha_texto: str) -> str:
         return fecha_texto
 
@@ -71,8 +71,8 @@ try:
         mostrar_mensaje_exito,
         mostrar_mensaje_error,
         mostrar_mensaje_info,
-    )  # type: ignore
-except Exception:  # pragma: no cover
+    )
+except Exception:
     def mostrar_mensaje_exito(texto: str) -> str:
         return texto
 
@@ -86,15 +86,15 @@ from auth_service import login as auth_login, registrar_usuario
 from task_service import listar_tareas, agregar_tarea, actualizar_tarea
 from db import get_conn
 
-# ---------------------------------------------------------------------------
-# Base palette extracted from the reference mockups
+
+
 BACKGROUND_COLOR = "#E9EFEC"
 SECONDARY_COLOR = "#697565"
 PRIMARY_TEXT_COLOR = "#1E201E"
 WHITE = "#FFFFFF"
 ERROR_COLOR = "#E16F64"
 
-# Shared design metrics (px) taken from the Figma export
+
 DESIGN_WIDTH = 1920
 DESIGN_HEIGHT = 1080
 PANEL_X = 1240
@@ -103,13 +103,13 @@ FIELD_WIDTH = 960
 FIELD_HEIGHT = 75
 FIELD_RADIUS = 30
 
-# Login screen specifics (original mockup)
+
 LOGIN_FIRST_FIELD_Y = 463
 LOGIN_SECOND_FIELD_Y = 631
 LOGIN_HEADLINE_FRAME = (FIELD_X, 240, 932, 108)
 LOGIN_BUTTON = (478, 799, 310, 75, 30)
 
-# Register screen specifics (second mockup)
+
 REGISTER_FIELD_TOPS = {
     "name": 141,
     "email": 309,
@@ -231,7 +231,7 @@ class LoginScreen(tk.Tk):
             bd=0,
         )
         self.canvas.pack(fill="both", expand=True)
-        # Scroll invisible activado por rueda del raton
+
         self.canvas.configure(yscrollincrement=20)
         self.canvas.bind_all("<MouseWheel>", self._on_mouse_wheel)
 
@@ -256,9 +256,9 @@ class LoginScreen(tk.Tk):
 
         self.show_login_screen()
 
-    # ------------------------------------------------------------------
-    # Shared helpers
-    # ------------------------------------------------------------------
+
+
+
     def _prepare_fonts(self):
         """Return fonts scaled to the current factor, with Outfit fallbacks."""
         available = {name.lower(): name for name in tkfont.families()}
@@ -315,7 +315,7 @@ class LoginScreen(tk.Tk):
                 image = Image.open(path).convert("RGBA")
                 image = image.resize(target_size, Image.LANCZOS)
                 return ImageTk.PhotoImage(image)
-            except Exception as exc:  # pragma: no cover - best effort
+            except Exception as exc:
                 messagebox.showwarning("Recursos", f"No se pudo cargar {CHEVRON_IMAGE}: {exc}")
                 return None
 
@@ -325,7 +325,7 @@ class LoginScreen(tk.Tk):
                 factor = max(1, round(photo.width() / target_size[0])) or 1
                 photo = photo.subsample(factor, factor)
             return photo
-        except tk.TclError as exc:  # pragma: no cover
+        except tk.TclError as exc:
             messagebox.showwarning("Recursos", f"No se pudo cargar {CHEVRON_IMAGE}: {exc}")
             return None
 
@@ -350,7 +350,7 @@ class LoginScreen(tk.Tk):
                 photo = ImageTk.PhotoImage(image)
             else:
                 photo = tk.PhotoImage(file=str(path))
-        except Exception as exc:  # pragma: no cover
+        except Exception as exc:
             messagebox.showwarning("Recursos", f"No se pudo cargar {filename}: {exc}")
             self.image_cache[cache_key] = None
             return None
@@ -493,7 +493,7 @@ class LoginScreen(tk.Tk):
             self.canvas.tag_bind(item, "<Enter>", on_enter)
             self.canvas.tag_bind(item, "<Leave>", on_leave)
 
-    # Coordinate helpers ------------------------------------------------
+
     def sx(self, value):
         return self.offset_x + value * self.scale
 
@@ -536,7 +536,7 @@ class LoginScreen(tk.Tk):
                 return None
             name = row["nombre"] or correo.split("@", 1)[0].title()
             return {"id": row["id"], "email": row["correo"], "name": name}
-        except Exception as exc:  # pragma: no cover
+        except Exception as exc:
             print("Error cargando el perfil:", exc)
             return None
 
@@ -555,7 +555,7 @@ class LoginScreen(tk.Tk):
                 estado = estado_por_dias(fecha) if fecha else ""
                 record["estado"] = estado
                 tasks.append(record)
-        except Exception as exc:  # pragma: no cover
+        except Exception as exc:
             print("Error listando tareas:", exc)
             tasks = []
         self.dashboard_tasks = tasks
@@ -566,9 +566,9 @@ class LoginScreen(tk.Tk):
         self.pending_email = None
         self.show_login_screen()
 
-    # ------------------------------------------------------------------
-    # View switching
-    # ------------------------------------------------------------------
+
+
+
     def show_login_screen(self):
         self.current_screen = "login"
         self._clear_screen()
@@ -592,9 +592,9 @@ class LoginScreen(tk.Tk):
         self._prepare_dashboard_data()
         self._draw_dashboard_ui()
 
-    # ------------------------------------------------------------------
-    # Login screen
-    # ------------------------------------------------------------------
+
+
+
     def show_tasks_screen(self):
         self.current_screen = "tasks"
         self._clear_screen()
@@ -836,7 +836,7 @@ class LoginScreen(tk.Tk):
             outline="",
         )
 
-        # Left stripe with rounded top-left and bottom-left corners only
+
         radius = TASK_CARD_RADIUS
         stripe_right = self.sx(x + TASK_CARD_STRIPE_WIDTH)
         rect_id = self.canvas.create_rectangle(
@@ -955,7 +955,7 @@ class LoginScreen(tk.Tk):
         self.task_modal_window = modal
         self.task_modal_context = context
 
-        # Campo de titulo (con placeholder "Tarea" y subrayado estilo maqueta)
+
         title_entry = tk.Entry(
             modal,
             textvariable=context["title_var"],
@@ -979,7 +979,7 @@ class LoginScreen(tk.Tk):
         )
         underline.place(x=self.sw(35), y=self.sh(120))
 
-        # Reposiciona la linea para que quede siempre debajo del texto del titulo
+
         def _reposition_title_underline():
             try:
                 modal.update_idletasks()
@@ -991,7 +991,7 @@ class LoginScreen(tk.Tk):
         title_entry.bind('<KeyRelease>', lambda _e: _reposition_title_underline())
         title_entry.bind('<Configure>', lambda _e: _reposition_title_underline())
 
-        # Logica de placeholder para el titulo
+
         context["title_placeholder"] = "Tarea"
         def _title_focus_in(_e):
             if context["title_var"].get() == context["title_placeholder"]:
@@ -1007,7 +1007,7 @@ class LoginScreen(tk.Tk):
             context["title_var"].set(context["title_placeholder"])
             title_entry.configure(fg="#7A7C77")
 
-        # Campo de fecha debajo del titulo
+
         date_entry = tk.Entry(
             modal,
             textvariable=context["date_var"],
@@ -1024,7 +1024,7 @@ class LoginScreen(tk.Tk):
             width=self.sw(664 - 70),
         )
 
-        # Placeholder para fecha
+
         context["date_placeholder"] = "dd/mm/aaaa"
         def _date_focus_in(_e):
             if context["date_var"].get() == context["date_placeholder"]:
@@ -1137,7 +1137,7 @@ class LoginScreen(tk.Tk):
 
         title = context["title_var"].get().strip()
         date_text = context["date_var"].get().strip()
-        # Normaliza placeholders a vacio
+
         if title == context.get("title_placeholder"):
             title = ""
         if date_text == context.get("date_placeholder"):
@@ -1320,9 +1320,9 @@ class LoginScreen(tk.Tk):
             self.email_var.set(self.pending_email)
             email_entry.icursor(tk.END)
 
-    # ------------------------------------------------------------------
-    # Register screen
-    # ------------------------------------------------------------------
+
+
+
     def _draw_register_ui(self):
         labels = [
             ("Nombre", REGISTER_FIELD_TOPS["name"] - 45),
@@ -1663,9 +1663,9 @@ class LoginScreen(tk.Tk):
         for img in image_items:
             self._place_image(img["file"], img["x"], img["y"], img["w"], img["h"])
 
-    # ------------------------------------------------------------------
-    # Actions
-    # ------------------------------------------------------------------
+
+
+
     def _on_login_click(self):
         email = self.email_var.get().strip().lower()
         password = self.password_var.get()
@@ -1750,7 +1750,7 @@ if __name__ == "__main__":
 
 
     def _on_mouse_wheel(self, event):
-        # delta positivo desplaza hacia arriba en Windows
+
         units = -1 * int(event.delta / 120)
         try:
             self.canvas.yview_scroll(units, "units")
@@ -1759,13 +1759,13 @@ if __name__ == "__main__":
 
     def _show_date_picker(self, anchor_widget: tk.Widget, context: dict):
         import calendar as _cal
-        # Cerrar anterior si existe
+
         if hasattr(self, "_date_picker") and self._date_picker:
             try:
                 self._date_picker.destroy()
             except Exception:
                 pass
-        # Derivar fecha inicial
+
         today = date.today()
         def parse_initial():
             txt = (context.get("date_var").get() or "").strip()
@@ -1781,7 +1781,7 @@ if __name__ == "__main__":
         picker.overrideredirect(True)
         picker.configure(bg=BACKGROUND_COLOR)
         self._date_picker = picker
-        # Posicion cerca del input
+
         try:
             ax = anchor_widget.winfo_rootx()
             ay = anchor_widget.winfo_rooty() + anchor_widget.winfo_height()
@@ -1791,10 +1791,10 @@ if __name__ == "__main__":
         w = int(max(240, round(self.sw(300))))
         h = int(max(220, round(self.sh(260))))
         picker.geometry(f"{w}x{h}+{ax}+{ay}")
-        # Contenedor
+
         frame = tk.Frame(picker, bg=BACKGROUND_COLOR, bd=0, highlightthickness=0)
         frame.pack(fill='both', expand=True, padx=8, pady=8)
-        # Cabecera con navegacion
+
         header = tk.Frame(frame, bg=BACKGROUND_COLOR)
         header.pack(fill='x')
         title_lbl = tk.Label(header, text='', bg=BACKGROUND_COLOR, fg=PRIMARY_TEXT_COLOR, font=self._font(18))
@@ -1845,7 +1845,7 @@ if __name__ == "__main__":
             except Exception:
                 pass
         redraw(year, month)
-        # Cerrar si se hace click fuera
+
         picker.bind('<FocusOut>', lambda _e: picker.destroy())
         picker.focus_force()
 

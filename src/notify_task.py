@@ -1,11 +1,11 @@
-﻿import argparse
+import argparse
 import sys
 import time
 
 
 def notify_windows(title: str, message: str):
     try:
-        from win10toast import ToastNotifier  # type: ignore
+        from win10toast import ToastNotifier
         ToastNotifier().show_toast(title, message, duration=10, threaded=False)
         return True
     except Exception:

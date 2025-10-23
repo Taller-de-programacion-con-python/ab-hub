@@ -1,4 +1,4 @@
-﻿"""Puente de validaciones para el IDE.
+"""Puente de validaciones para el IDE.
 
 Replica las funciones usadas en la app para eliminar warnings de import.
 """

@@ -1,7 +1,7 @@
 from hashlib import sha256
 from uuid import uuid4
 from db import get_conn
-from mensajes_adapter import t 
+from mensajes_adapter import t
 
 def hash_password(password: str) -> str:
     """Genera una cadena 'salt$hash' segura para guardar en la base de datos."""

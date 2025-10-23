@@ -1,4 +1,4 @@
-﻿"""Puente de mensajes para el IDE.
+"""Puente de mensajes para el IDE.
 
 Provee las funciones `mostrar_mensaje_exito`, `mostrar_mensaje_error` y
 `mostrar_mensaje_info` para que el import `from mensajes import ...`

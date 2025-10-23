@@ -1,4 +1,4 @@
-﻿"""Puente de fechas para el IDE.
+"""Puente de fechas para el IDE.
 
 Ofrece utilidades mínimas compatibles con la app.
 """

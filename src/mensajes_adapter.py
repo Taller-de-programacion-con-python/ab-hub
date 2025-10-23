@@ -13,11 +13,11 @@ Uso:
 
 from typing import Dict, Tuple, List
 
-_T_EXTERN = None        
+_T_EXTERN = None
 _CATALOGO: Dict[str, str] = {}
 
 try:
-    from mensajes import t as _T_EXTERN, MENSAJES as _CATALOGO  # type: ignore
+    from mensajes import t as _T_EXTERN, MENSAJES as _CATALOGO
 except Exception:
     _CATALOGO = {
         "auth_ok": "Inicio de sesión correcto",
@@ -37,7 +37,7 @@ except Exception:
         "password_weak": "La contraseña es débil",
     }
 
-    def _T_EXTERN(clave: str, **kv) -> str:  
+    def _T_EXTERN(clave: str, **kv) -> str:
         base = _CATALOGO.get(clave, clave)
         try:
             return base.format(**kv) if kv else base
@@ -51,7 +51,7 @@ def t(clave: str, **kv) -> str:
     Ej: t("task_added"); t("greeting", nombre="Ana") -> "Hola Ana"
     """
     try:
-        return _T_EXTERN(clave, **kv) 
+        return _T_EXTERN(clave, **kv)
     except Exception:
         base = _CATALOGO.get(clave, clave)
         try:
