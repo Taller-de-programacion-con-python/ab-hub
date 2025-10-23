@@ -1,0 +1,1 @@
+﻿{"version":"0.2.0","configurations":[{"name":"AB Hub (panel_tareas)","type":"python","request":"launch","program":"${workspaceFolder}/panel_tareas.py","cwd":"${workspaceFolder}","console":"integratedTerminal","env":{}}]}
