@@ -1,8 +1,8 @@
-# -*- mode: python ; coding: utf-8 -*-
+﻿# -*- mode: python ; coding: utf-8 -*-
 
 
 a = Analysis(
-    ['panel_tareas.py'],
+    ['login_screen.py'],
     pathex=[],
     binaries=[],
     datas=[('src', 'src'), ('Linea divisora.png', '.'), ('Vector.png', '.')],
@@ -36,3 +36,4 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
+

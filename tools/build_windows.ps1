@@ -22,8 +22,9 @@ $pyArgs += @(
   '--add-data','Vector.png;.'
 )
 
-python -m PyInstaller @pyArgs panel_tareas.py
+python -m PyInstaller @pyArgs login_screen.py
 
 Write-Host "`nListo. Ejecutable en dist/$Name.exe (o carpeta $Name)."
+
 
 
