@@ -2,7 +2,7 @@
 
 ## Estructura mínima
 
-- `login_screen.py` (aplicación Tkinter)
+- `panel_tareas.py` (aplicación Tkinter)
 - `src/` (servicios, DB sqlite y notificador)
 - Recursos PNG en la raíz (íconos usados por la UI)
 - `tools/` (scripts de empaquetado y acceso directo)
@@ -38,5 +38,6 @@ Notas
 ## Ejecutar con Python (alternativa portable)
 Si la otra PC tiene Python 3.11/3.12:
 ```powershell
-python login_screen.py
+python panel_tareas.py
 ```
+

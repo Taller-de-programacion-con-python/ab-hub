@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import tkinter as tk
 from datetime import date, datetime
 from pathlib import Path
@@ -759,6 +759,17 @@ class LoginScreen(tk.Tk):
             pass
 
 
+    def _compute_card_height(self, title: str) -> int:
+        try:
+            fnt = self._font(30)
+            avail = int(self.sw(TASK_CARD_WIDTH - 160))
+            w = fnt.measure(str(title)) if hasattr(fnt, 'measure') else 0
+            linespace = int(fnt.metrics('linespace')) if hasattr(fnt, 'metrics') else 32
+            lines = max(1, (w + avail - 1) // avail)
+            extra = max(0, lines - 1)
+            return int(TASK_CARD_HEIGHT + extra * (linespace))
+        except Exception:
+            return TASK_CARD_HEIGHT
     def _build_task_sections(self) -> dict[str, list[dict]]:
         sections: dict[str, list[dict]] = {config["key"]: [] for config in TASK_SECTION_CONFIG}
         today = date.today()
@@ -825,16 +836,42 @@ class LoginScreen(tk.Tk):
             outline="",
         )
 
-        stripe = self.canvas.create_rectangle(
-            self.sx(x),
+        # Left stripe with rounded top-left and bottom-left corners only
+        radius = TASK_CARD_RADIUS
+        stripe_right = self.sx(x + TASK_CARD_STRIPE_WIDTH)
+        rect_id = self.canvas.create_rectangle(
+            self.sx(x + radius),
             self.sy(y),
-            self.sx(x + TASK_CARD_STRIPE_WIDTH),
+            stripe_right,
             self.sy(y + TASK_CARD_HEIGHT),
             fill=status_style["stripe"],
             outline="",
         )
-        items.append(stripe)
-
+        rect_mid = self.canvas.create_rectangle(
+            self.sx(x),
+            self.sy(y + radius),
+            self.sx(x + radius),
+            self.sy(y + TASK_CARD_HEIGHT - radius),
+            fill=status_style["stripe"],
+            outline="",
+        )
+        oval_top = self.canvas.create_oval(
+            self.sx(x),
+            self.sy(y),
+            self.sx(x + 2 * radius),
+            self.sy(y + 2 * radius),
+            fill=status_style["stripe"],
+            outline="",
+        )
+        oval_bottom = self.canvas.create_oval(
+            self.sx(x),
+            self.sy(y + TASK_CARD_HEIGHT - 2 * radius),
+            self.sx(x + 2 * radius),
+            self.sy(y + TASK_CARD_HEIGHT),
+            fill=status_style["stripe"],
+            outline="",
+        )
+        items.extend([rect_id, rect_mid, oval_top, oval_bottom])
         date_text = self.canvas.create_text(
             self.sx(x + 62),
             self.sy(y + 16),
@@ -1811,6 +1848,11 @@ if __name__ == "__main__":
         # Cerrar si se hace click fuera
         picker.bind('<FocusOut>', lambda _e: picker.destroy())
         picker.focus_force()
+
+
+
+
+
 
 
 
