@@ -17,12 +17,11 @@ if ($OneFolder) { $pyArgs += '--onedir' } else { $pyArgs += '--onefile' }
 
 # Incluir recursos necesarios
 $pyArgs += @(
-  '--add-data','src;src',
-  '--add-data','Linea divisora.png;.',
-  '--add-data','Vector.png;.'
+  '--add-data','assets/images;assets/images',
+  '--add-data','src/bloc.db;src'
 )
 
-python -m PyInstaller @pyArgs login_screen.py
+python -m PyInstaller @pyArgs src/abhub/app.py
 
 Write-Host "`nListo. Ejecutable en dist/$Name.exe (o carpeta $Name)."
 

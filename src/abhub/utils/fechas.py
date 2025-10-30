@@ -32,3 +32,4 @@ def formatear_fecha(fecha_texto: str) -> str:
         return f"{int(dd):02d}/{int(mm):02d}/{int(aaaa):04d}"
     except Exception:
         return fecha_texto
+

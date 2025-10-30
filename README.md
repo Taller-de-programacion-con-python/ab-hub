@@ -1,44 +1,61 @@
-﻿# AB Hub (desktop)
+# AB Hub (desktop)
 
-## Estructura mínima
+Proyecto UI (Tkinter) con empaquetado para Windows y estructura profesional.
 
-- `login_screen.py` (aplicación Tkinter)
-- `src/` (servicios, DB sqlite y notificador)
-- Recursos PNG en la raíz (íconos usados por la UI)
-- `tools/` (scripts de empaquetado y acceso directo)
+## Estructura
 
-## Ejecutar en otra PC (sin instalar Python)
+- `src/abhub/app.py` UI principal (login/registro/tareas)
+- `src/abhub/services/` servicios de dominio y DB
+  - `db.py` conexión SQLite (usa `src/bloc.db` por defecto)
+  - `auth_service.py`, `task_service.py`, `notify_task.py`
+- `src/abhub/utils/` utilidades (validaciones/fechas/mensajes)
+- `src/abhub/adapters/` adaptadores (por ejemplo, mensajes)
+- `assets/images/` recursos PNG de la UI
+- `src/bloc.db` base de datos SQLite incluida
+- `tools/` scripts de build y acceso directo
+- `ABHub.spec` configuración de PyInstaller
 
-1. En esta máquina, crear el ejecutable para Windows:
-   - Abrir PowerShell en la carpeta del proyecto y ejecutar:
-     ```powershell
-     .\tools\build_windows.ps1
-     ```
-     - Genera `dist/ABHub.exe` (modo "onefile") listo para copiar en USB.
-     - Si prefieres carpeta portable en lugar de un único exe:
-       ```powershell
-       .\tools\build_windows.ps1 -OneFolder
-       ```
+## Requisitos
 
-2. Copiar `dist/ABHub.exe` (o la carpeta `dist/ABHub/`) a un USB.
+- Python 3.11 o 3.12
+- Opcional: `Pillow` para mejor escalado de imágenes
+  ```powershell
+  python -m pip install pillow
+  ```
 
-3. En la otra PC (Windows 10/11):
-   - Copiar el exe o la carpeta al equipo, por ejemplo `C:\ABHub`.
-   - (Opcional) Crear acceso directo en el escritorio:
-     ```powershell
-     .\tools\create_shortcut.ps1 -ExePath C:\ABHub\ABHub.exe -ShortcutName AB Hub
-     ```
-   - Doble clic en el acceso directo (o en el exe) para abrir la app.
+## Ejecutar en desarrollo
 
-Notas
-- La base de datos sqlite se incluye dentro de `src/bloc.db`. Puedes distribuirla vacía o con datos de prueba.
-- La app programa recordatorios en Windows mediante `src/notify_task.py` (usa `schtasks`). Esto requiere ejecutar como usuario con permisos suficientes.
-- Si tu antivirus bloquea el exe, marca la carpeta como confiable o usa el modo `-OneFolder`.
+Desde la raíz del repo:
 
-## Ejecutar con Python (alternativa portable)
-Si la otra PC tiene Python 3.11/3.12:
 ```powershell
-python login_screen.py
+python run.py
 ```
 
+Alternativas:
+- Desde la carpeta `src/`: `python -m abhub`
+
+## Empaquetar para Windows (EXE)
+
+1) Abrir PowerShell en la raíz del proyecto y ejecutar:
+
+```powershell
+./tools/build_windows.ps1
+```
+
+- Genera `dist/ABHub.exe` (onefile). Para carpeta portable:
+  ```powershell
+  ./tools/build_windows.ps1 -OneFolder
+  ```
+
+2) En otra PC (Windows 10/11): copiar `dist/ABHub.exe` o la carpeta generada.
+
+3) (Opcional) Crear acceso directo:
+
+```powershell
+./tools/create_shortcut.ps1 -ExePath C:\ABHub\ABHub.exe -ShortcutName AB Hub
+```
+
+Notas
+- La base de datos SQLite por defecto está en `src/bloc.db`. Puedes reemplazarla por una copia con datos de prueba.
+- El script `src/abhub/services/notify_task.py` puede usarse por tareas programadas (schtasks) para notificaciones locales.
 

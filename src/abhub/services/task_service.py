@@ -1,4 +1,4 @@
-from db import get_conn
+from .db import get_conn
 
 def agregar_tarea(correo: str, texto: str, fecha_ddmm: str, done: bool = False) -> bool:
     correo, texto, fecha_ddmm = correo.strip().lower(), texto.strip(), fecha_ddmm.strip()

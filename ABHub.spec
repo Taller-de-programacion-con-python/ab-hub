@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['login_screen.py'],
+    ['src/abhub/app.py'],
     pathex=[],
     binaries=[],
-    datas=[('src', 'src'), ('Linea divisora.png', '.'), ('Vector.png', '.')],
+    datas=[('assets/images', 'assets/images'), ('src/bloc.db', 'src')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -4,8 +4,6 @@ from datetime import date, datetime
 from pathlib import Path
 from tkinter import font as tkfont
 from tkinter import messagebox
-import sys
-import importlib.util
 
 try:
     from PIL import Image, ImageTk
@@ -13,79 +11,40 @@ except ImportError:
     Image = None
     ImageTk = None
 
-
+from abhub.utils.validaciones import (
+    es_texto_vacio,
+    es_correo_valido,
+    es_contrasena_valida,
+)
+from abhub.utils.fechas import formatear_fecha, estado_por_dias
+from abhub.utils.mensajes import (
+    mostrar_mensaje_exito,
+    mostrar_mensaje_error,
+    mostrar_mensaje_info,
+)
+from abhub.services.auth_service import login as auth_login, registrar_usuario
+from abhub.services.task_service import listar_tareas, agregar_tarea, actualizar_tarea
+from abhub.services.db import get_conn
 
 
 
 BASE_DIR = Path(__file__).resolve().parent
-SRC_DIR = BASE_DIR / "src"
-if str(SRC_DIR) not in sys.path:
-    sys.path.insert(0, str(SRC_DIR))
-
-SRC_COPY_DIR = BASE_DIR / "src copy"
 
 
-def load_legacy_module(alias: str, filename: str):
-    path = SRC_COPY_DIR / filename
-    if not path.exists():
-        return None
-    spec = importlib.util.spec_from_file_location(alias, path)
-    if spec and spec.loader:
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        sys.modules[alias] = module
-        return module
-    return None
+def _assets_dir() -> Path:
+    candidates = [
+        BASE_DIR.parents[2] / "assets" / "images",
+        BASE_DIR.parents[1] / "assets" / "images",
+        BASE_DIR / "assets" / "images",
+        Path.cwd() / "assets" / "images",
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    return candidates[0]
 
 
-legacy_validaciones = load_legacy_module("validaciones", "01_validaciones.py")
-legacy_fechas = load_legacy_module("fechas", "02_fechas.py")
-legacy_mensajes = load_legacy_module("mensajes", "03_mensajes.py")
-
-
-try:
-    from validaciones import es_texto_vacio, es_correo_valido, es_contrasena_valida
-except Exception:
-    def es_texto_vacio(texto: str) -> bool:
-        return not texto or str(texto).strip() == ""
-
-    def es_correo_valido(correo: str) -> bool:
-        return isinstance(correo, str) and "@" in correo and "." in correo.split("@", 1)[-1]
-
-    def es_contrasena_valida(contrasena: str) -> bool:
-        if not isinstance(contrasena, str) or len(contrasena) < 8:
-            return False
-        return any(c.isalpha() for c in contrasena) and any(c.isdigit() for c in contrasena)
-
-try:
-    from fechas import formatear_fecha, estado_por_dias
-except Exception:
-    def formatear_fecha(fecha_texto: str) -> str:
-        return fecha_texto
-
-    def estado_por_dias(fecha_texto: str) -> str:
-        return ""
-
-try:
-    from mensajes import (
-        mostrar_mensaje_exito,
-        mostrar_mensaje_error,
-        mostrar_mensaje_info,
-    )
-except Exception:
-    def mostrar_mensaje_exito(texto: str) -> str:
-        return texto
-
-    def mostrar_mensaje_error(texto: str) -> str:
-        return texto
-
-    def mostrar_mensaje_info(texto: str) -> str:
-        return texto
-
-from auth_service import login as auth_login, registrar_usuario
-from task_service import listar_tareas, agregar_tarea, actualizar_tarea
-from db import get_conn
-
+ASSETS_DIR = _assets_dir()
 
 
 BACKGROUND_COLOR = "#E9EFEC"
@@ -203,7 +162,7 @@ class LoginScreen(tk.Tk):
 
     def __init__(self):
         super().__init__()
-        self.title("Inicio de Sesion")
+        self.title("Academy Blocs")
         self.configure(bg=BACKGROUND_COLOR)
 
         self.update_idletasks()
@@ -300,7 +259,7 @@ class LoginScreen(tk.Tk):
 
     def _load_chevron_image(self):
         """Load and scale the chevron icon used inside the fields."""
-        path = Path(__file__).with_name(CHEVRON_IMAGE)
+        path = ASSETS_DIR / CHEVRON_IMAGE
         if not path.exists():
             messagebox.showwarning("Recursos", f"No se encontro {CHEVRON_IMAGE}. Se dibujara el icono con lineas.")
             return None
@@ -337,7 +296,7 @@ class LoginScreen(tk.Tk):
         if cache_key in self.image_cache:
             return self.image_cache[cache_key]
 
-        path = Path(__file__).with_name(filename)
+        path = ASSETS_DIR / filename
         if not path.exists():
             self.image_cache[cache_key] = None
             messagebox.showwarning("Recursos", f"No se encontro {filename}.")
@@ -1848,7 +1807,6 @@ if __name__ == "__main__":
 
         picker.bind('<FocusOut>', lambda _e: picker.destroy())
         picker.focus_force()
-
 
 
 

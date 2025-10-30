@@ -1,9 +1,8 @@
 """Puente de mensajes para el IDE.
 
 Provee las funciones `mostrar_mensaje_exito`, `mostrar_mensaje_error` y
-`mostrar_mensaje_info` para que el import `from mensajes import ...`
-resuelva sin advertencias en analizadores estáticos. A tiempo de ejecución
-simplemente devuelven el texto recibido o lo formatean mínimamente.
+`mostrar_mensaje_info` para que el import resuelva sin advertencias.
+En tiempo de ejecución devuelven el texto recibido.
 """
 from __future__ import annotations
 
@@ -20,3 +19,4 @@ def mostrar_mensaje_error(texto: Any) -> str:
 
 def mostrar_mensaje_info(texto: Any) -> str:
     return str(texto)
+
